@@ -1,0 +1,86 @@
+@import "normalize";
+@import "grid";
+
+@include normalize();
+
+/*
+ Table
+ */
+
+.custom-table,
+.custom-table td,
+.custom-table th {
+  border: 1px solid #dee2e6;
+}
+
+.custom-table td,
+.custom-table th {
+  padding: .3rem;
+}
+
+.custom-table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  border-collapse: collapse;
+
+  &__hedaer {
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+  }
+
+  th {
+    text-align: center;
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+  }
+
+  th.ordered {
+    user-select: none;
+    cursor: pointer;
+  }
+
+  td.empty {
+    user-select: none;
+    color: transparent;
+  }
+
+  .caret {
+    font-size: 0.7em;
+
+    margin-right: 5px;
+  }
+
+  tbody tr:nth-of-type(odd) {
+    background-color: rgba(0,0,0,.05);
+  }
+
+  &__footer {
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+
+    button {
+      padding: 0 .3rem;
+    }
+
+    .chevron {
+      font-size: 1rem;
+
+      cursor: pointer;
+    }
+
+    .number-of-page-text {
+      padding: 0 10px;
+    }
+  }
+}
+
+

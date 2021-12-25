@@ -1,0 +1,97 @@
+{
+    "extends": [
+        "airbnb",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "prettier",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:import/typescript"
+    ],
+    "plugins": [
+        "@typescript-eslint",
+        "prettier"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "env": { "browser": true, "node": true, "es6": true },
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "rules": {
+        "max-len": "off",
+        "import/no-extraneous-dependencies": "off",
+        "import/prefer-default-export": "off",
+        "import/no-unresolved": "off",
+        "react/jsx-boolean-value": 0,
+        "react/jsx-tag-spacing": 0,
+        "react/jsx-props-no-spreading": 0,
+        "react/require-default-props": 0,
+        "react/no-array-index-key": 0,
+        "jsx-a11y/anchor-has-content": 0,
+        "no-param-reassign": "off",
+        "jsx-a11y/label-has-for": [
+            2,
+            {
+                "components": [
+                    "Label"
+                ],
+                "required": {
+                    "every": [
+                        "nesting",
+                        "id"
+                    ]
+                },
+                "allowChildren": true
+            }
+        ],
+        "react/react-in-jsx-scope": "off",
+        "prettier/prettier": "error",
+        "react/prop-types": "off",
+        "jsx-a11y/anchor-is-valid": "off",
+        "react/jsx-filename-extension": [
+            "error",
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx",
+                    ".ts",
+                    ".tsx"
+                ]
+            }
+        ],
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "js": "never",
+                "jsx": "never",
+                "ts": "never",
+                "tsx": "never",
+                "d.ts": "never"
+            }
+        ],
+        "@typescript-eslint/no-unused-vars": "error",
+        "@typescript-eslint/no-explicit-any": "off"
+    },
+    "settings": {
+        "import/extensions": [".js", ".jsx", ".ts", ".tsx", ".d.ts"],
+        "import/parsers": {
+            "@typescript-eslint/parser": [".ts", ".tsx", ".d.ts"]
+        },
+        "import/resolver": {
+            "node": {
+                "moduleDirectory": [
+                    "node_modules",
+                    "src"
+                ],
+                "extensions": [
+                    ".js",
+                    ".jsx",
+                    ".ts",
+                    ".tsx",
+                    ".d.ts"
+                ]
+            }
+        }
+    }
+}
